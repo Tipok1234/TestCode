@@ -4,7 +4,7 @@ using Enum;
 using UnityEngine;
 using System;
 
-namespace Saves
+namespace DataUtils
 {
     public class GameSaves
     {
@@ -102,7 +102,7 @@ namespace Saves
             }
             else
             {
-                Debug.LogError("Wrong data type");
+                Debug.LogError($"Wrong data type: Attempted to write type {typeof(T).Name}");
             }
 
             PlayerPrefs.Save();

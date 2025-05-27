@@ -1,6 +1,6 @@
 using UnityEngine;
 using TMPro;
-using Saves;
+using DataUtils;
 using DG.Tweening;
 using System.Globalization;
 
@@ -39,9 +39,11 @@ namespace Views
 
         private void AnimateCoinText(int fromValue, int toValue)
         {
-            DOTween.To(() => fromValue, x => {
-                coinText.text = FormatNumberWithSpaces(x);
-            }, toValue, animationTime).SetEase(Ease.OutQuad);
+            if (coinText)
+            {
+                DOTween.To(() => fromValue, x => { coinText.text = FormatNumberWithSpaces(x); }, toValue, animationTime)
+                    .SetEase(Ease.OutQuad);
+            }
         }
 
         private string FormatNumberWithSpaces(int number)

@@ -2,8 +2,8 @@ namespace Enum
 {
     public enum CharacteristicType
     {
-        None,
-        Speed,
-        JumpForce
+        None = -1,
+        Speed = 0,
+        JumpForce = 1
     }
 }

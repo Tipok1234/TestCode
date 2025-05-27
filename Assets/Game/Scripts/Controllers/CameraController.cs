@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Controller
+namespace Controllers
 {
     public class CameraController : MonoBehaviour
     {

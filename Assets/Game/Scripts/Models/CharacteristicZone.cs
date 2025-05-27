@@ -8,7 +8,7 @@ namespace Models
     {
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Player"))
+            if (IsPlayer(other))
             {
                 UIManager.Instance.OpenScreen<CharacteristicScreen>();
             }
@@ -16,10 +16,15 @@ namespace Models
 
         private void OnTriggerExit(Collider other)
         {
-            if (other.CompareTag("Player"))
+            if (IsPlayer(other))
             {
                 UIManager.Instance.CloseScreen<CharacteristicScreen>();
             }
+        }
+
+        private bool IsPlayer(Collider collider)
+        {
+            return collider.CompareTag("Player");
         }
     }
 }

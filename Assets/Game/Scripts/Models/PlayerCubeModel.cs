@@ -1,5 +1,5 @@
 using Enum;
-using Saves;
+using DataUtils;
 using UnityEngine;
 
 namespace Models
@@ -20,15 +20,26 @@ namespace Models
 
         private float _moveSpeed;
         private float _jumpForce;
+        
+        private float _inputX;
+        private float _inputZ;
+        private bool _jumpRequested;
 
         private void Update()
         {
-            HandleJump();
+            _inputX = Input.GetAxis("Horizontal");
+            _inputZ = Input.GetAxis("Vertical");
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                _jumpRequested = true;
+            }
         }
 
         private void FixedUpdate()
         {
             HandleMovement();
+            HandleJump();
         }
 
         public void Setup()
@@ -45,9 +56,6 @@ namespace Models
 
         private void HandleMovement()
         {
-            float moveX = Input.GetAxis("Horizontal");
-            float moveZ = Input.GetAxis("Vertical");
-
             Vector3 forward = _cameraTransform.forward;
             Vector3 right = _cameraTransform.right;
 
@@ -57,7 +65,7 @@ namespace Models
             forward.Normalize();
             right.Normalize();
 
-            Vector3 moveDirection = forward * moveZ + right * moveX;
+            Vector3 moveDirection = forward * _inputZ + right * _inputX;
             Vector3 move = moveDirection * _moveSpeed;
 
             Vector3 velocity = rb.velocity;
@@ -70,10 +78,12 @@ namespace Models
         {
             _isGrounded = Physics.CheckSphere(groundCheck.position, groundCheckRadius, groundLayer);
 
-            if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)
+            if (_jumpRequested && _isGrounded)
             {
                 rb.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
             }
+
+            _jumpRequested = false; 
         }
     }
 }

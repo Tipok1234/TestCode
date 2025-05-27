@@ -1,7 +1,8 @@
 using System;
 using Datas;
+using DG.Tweening;
 using Interfaces;
-using Saves;
+using DataUtils;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,7 +19,16 @@ namespace Views
         
         [SerializeField] private Button buyButton;
         
+        [SerializeField] private float duration;
+        
         public CharacteristicData Data { get; private set; }
+        
+        private Tween _tween;
+
+        private void OnDisable()
+        {
+            _tween?.Kill();
+        }
 
         public override void Setup(CharacteristicData data)
         {
@@ -28,6 +38,7 @@ namespace Views
 
         public override void Refresh()
         {
+            AnimateShow();
             ShowDescription();
             ShowValue();
             ShowPrice();
@@ -39,6 +50,12 @@ namespace Views
             GameSaves.Instance.RemoveCoin((int)Data.Price);
             GameSaves.Instance.SaveCharacteristic(Data);
             BuyAction?.Invoke();   
+        }
+        
+        private void AnimateShow()
+        {
+            transform.localScale = Vector3.zero;
+            _tween = transform.DOScale(Vector3.one, duration);
         }
 
         private void SetStateButton()

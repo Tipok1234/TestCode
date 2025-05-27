@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using Screens;
 using UnityEngine;
 
 namespace Managers
@@ -9,6 +8,18 @@ namespace Managers
         public PlayerSpawner PlayerSpawner => playerSpawner;
         
         [SerializeField] private PlayerSpawner playerSpawner;
+
+        private void Start()
+        {
+            UIManager.Instance.GetScreen<GameScreen>().StartGameAction += SetupGame;
+            UIManager.Instance.GetScreen<GameScreen>().ResetGameAction += ResetGame;
+        }
+
+        private void OnDestroy()
+        {
+            UIManager.Instance.GetScreen<GameScreen>().StartGameAction -= SetupGame;
+            UIManager.Instance.GetScreen<GameScreen>().ResetGameAction -= ResetGame;
+        }
 
         public void SetupGame()
         {

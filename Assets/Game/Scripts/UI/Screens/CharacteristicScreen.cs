@@ -1,6 +1,6 @@
 using Datas;
 using Managers;
-using Saves;
+using DataUtils;
 using UnityEngine;
 using Views;
 
@@ -12,7 +12,9 @@ namespace Screens
         
         public override void OpenScreen()
         {
+            //TODO: FOR Test upgrages
             GameSaves.Instance.AddCoin(100);
+            
             base.OpenScreen();
             Setup(config.Datas);
         }
