@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 966
   m_ShowMode: 4
-  m_Title: Console
+  m_Title: Inspector
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 38
+  controlID: 30998
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 39
+  controlID: 30999
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 50}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 40
+  controlID: 31000
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -214,7 +214,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 311
     y: 0
-    width: 644
+    width: 636
     height: 570
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
@@ -239,9 +239,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 955
+    x: 947
     y: 0
-    width: 440
+    width: 448
     height: 570
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
@@ -327,9 +327,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 955
+    x: 947
     y: 84
-    width: 438
+    width: 446
     height: 549
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -349,7 +349,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 1}
-  m_TargetSize: {x: 2778, y: 1284}
+  m_TargetSize: {x: 750, y: 1334}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -365,11 +365,11 @@ MonoBehaviour:
     - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
     pluginStates:
     - '{}'
-    scale: 15
+    scale: 30
     fitToScreenEnabled: 1
-    rotationDegree: 90
+    rotationDegree: 0
     highlightSafeAreaEnabled: 0
-    friendlyName: Apple iPhone 12 Pro Max
+    friendlyName: Apple iPhone SE (2nd generation)
     screenIndex: 0
     networkReachability: 1
     systemLanguage: 10
@@ -412,7 +412,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 12fbffff
+      m_ExpandedIDs: 0021feff1a3afeff545efeffb0aefeffe2aefeffe8aefefffcaefeff64dcfeff6adcfeff7edcfeff32e5feff38e5feff4ce5feff3efcfeff6a06ffff1009ffff1a0fffff9610ffff6a2efffffc2fffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -458,7 +458,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 311
     y: 84
-    width: 642
+    width: 634
     height: 549
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -790,7 +790,7 @@ MonoBehaviour:
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: UnityEditor.SceneViewCameraOverlay
-      index: 11
+      index: 8
       layout: 4
       size: {x: 0, y: 0}
       sizeOverriden: 0
@@ -835,7 +835,7 @@ MonoBehaviour:
       sizeOverriden: 0
     m_OverlaysVisible: 1
   m_WindowGUID: 78eb6844aa90db44ab80e468b670855d
-  m_Gizmos: 0
+  m_Gizmos: 1
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 0
   m_SceneLighting: 1
@@ -844,9 +844,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0, z: 0}
+    m_Target: {x: 0, y: 3, z: 0}
     speed: 2
-    m_Value: {x: -13.029379, y: 4.889598, z: -0.015784852}
+    m_Value: {x: 0, y: 3, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -884,7 +884,7 @@ MonoBehaviour:
       m_Fade:
         m_Target: 0
         speed: 2
-        m_Value: 1
+        m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
@@ -892,13 +892,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+    m_Target: {x: -0.39300144, y: -0.5873502, z: 0.39182678, w: -0.58910877}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_Value: {x: -0.39299995, y: -0.5873479, z: 0.3918253, w: -0.5891065}
   m_Size:
-    m_Target: 10
+    m_Target: 10.92025
     speed: 2
-    m_Value: 2.9962294
+    m_Value: 10.92025
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -916,7 +916,7 @@ MonoBehaviour:
     m_FarClip: 200
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewRotation: {x: -0.04197588, y: 0.89423597, z: -0.43728262, w: -0.08583957}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -1038,7 +1038,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Game/Scripts/Controller
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1046,16 +1046,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Game/Datas
+  - Assets/Game/Scripts/Controller
   m_LastFoldersGridSize: 96
-  m_LastProjectPath: C:\UnityDanila\CosmoCleaner
+  m_LastProjectPath: C:\UnityDanila\TestCode
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 103}
-    m_SelectedIDs: 98680000
-    m_LastClickedID: 26776
-    m_ExpandedIDs: 
+    scrollPos: {x: 0, y: 51}
+    m_SelectedIDs: d4ad0000
+    m_LastClickedID: 44500
+    m_ExpandedIDs: 00000000c64000007c8000008480000088800000fa8d000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1083,7 +1083,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 00000000c64000007c8000008480000088800000fa8d000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1108,8 +1108,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 8a620000
-    m_LastClickedInstanceID: 25226
+    m_SelectedInstanceIDs: 9610ffff
+    m_LastClickedInstanceID: -61290
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300007efd0000bcbb0e0088f3500044350000c2bd00006ec600006a7d0000acd9070020657000baf30700c6f30700c6840000a4e4070044840000848a5600928a5600908a56008e8a5600948a5600828a56008c8a56008a8a5600888a5600fe7c56003ad57c013cd77c01bad97c0108dc7c01aee71b00aae51b0034f007003af0070042f0070048f007004ef0070054f007005af00700f8ee07001e8a5600ce3d8b0084719800be08080024cc25008e1708002ab22500487e00006612010094980000c4980000380501001e82010040720000a6090100b8890000eaa77e0178ac7e0172820e00be810e006af10000b8e20000c6e20000d4e20000dee20000ece20000f6e2000004e3000018e3000022e3000030e3000048e3000052e300005ce3000070e3000066e300007ae3000088e300003ae3000014000100eae2000032e3000028e30000f45a08007a630800ce771f00c0771f009a5a080068e30000a6e300008625110044fe000000ff00001643080044440800b0434a0088f50000cae00000045608006a550800d4fe00000cfe0000565a080004e400000ae4000014e400001ee400000e961e0028e4000036e4000044e400004ee400005ce4000066e4000074e400007ee4000088e40000a0e40000b8e40000c2e40000cce40000eae40000f8e40000e0e40000d4951e0060961e0006961e00c4951e0066961e0018961e00ea951e005e961e00aae40000f6951e00906c0800f87f0800089700008e8900005e96000070e2000042f80000f80d0100e0750000d25c0200f03b0200f4530800bcf30000485f0800205f0800f05e0800eafd0000684e08009c580800e00101001c6108000a53080012508e00a24d0800405908000e5708000c5708007ce50000c0e500009a11010004e600003ee60000062b09006ae600000a2b09000e2b0900ea2a09004e2b0900729408007a2b0900362b0900562b0900622b09007e2b09002a2b0900222b0900fc720800743f50005883090086670100341e050000150500dc5c0200501401002a7a01006e0403006c040300080503000605030038072300c8130100d810c100e6130100261e0100502e0400d4eb0800966d8800baeb0800e81d0100a46e01009e6a0100fa6a0100fc6d0100fa1e0100fc1e0100fe1e0100001f0100021f0100081f0100061f0100041f01000c1f01000e1f0100141f0100cc1e0500109a6700729c6700c43a01009e3f0100963f0100d644010052495300b23f0100a63f0100601e01007014010090360100fc5c66008e360100b43f0100ae300100b2300100b430010014220500ee260500f0260500f42605008a2001008e200100cc230400f22605009a39010054a303002a3f7800607174006421010068210100602101007e1a010036170100a02101003a25020084092200ec8e01001643010004430100e6102200de220100041701001017010060d60000f463020058ba4a00ea9d25004a2405003c160100d00605003a3b00003c3b0000a60b050010081a00621d0100721d0100681d01004cea0300ec290500701d01008c1d010044670200bc7409003c1e6000dc1e0100ec1e01005e100100083b01000e0b01001c990100a84805006a2101009a32010028d504007e3805005c27090078c60100bac60100bec60100bcc6010036c70100f0e8420066e2010068e201006ae201006ce201006ee2010070e2010052e2010054e2010056e2010058e201005ae201005ce201001ce20100f62f0300f82f0300fa2f03006a710400ea750400f42f030024dd01000e82040048ca02008c23010092230100dc87040068cc030064c60300e0bc1700e2bc17000cd1030024bb5c006ccc030066c8010056c8010058c801005ac801008cbc030008c203006ec801007c59350050b275003e9c0f0098b21a006eb41a00489c0f0092b41a00d8680300da68030054580300ce451200a09a2c003cd41e0030d41e003ec80100b2e2160082ed010064ed01007aed01007ced0100f8051800d4071800a80718001cb72f00eab92f006612040024cf010042cc0300883904000cc80300f2c7030028c803008a39040060c401005ec40100f0320a00c4320a0018310a009e320a00fc310500a81e020068360500f4310500f4884800f07104008c720400e8620000e85b00000c5b0000c6df00007c6b00002a6f0000c8770000c077000088670000a6670000aa6700007c6300008063000002680000046800005a16010000680000fc6700002ac501004468000084630000a2640000aa620000526900009466000092660000be6500008e66000098660000966600002c690000ae650000b06500001a690000166900001e690000f06700008a900000ae980000e29900003e6f0000767e0000727e00006c6b0000dc780000ba78000056bc030050bc0300ee77000062730000b4720000227400001e760000fe7200002cab000044ab00003cab00009caa0000caaa0000f2d20000eed20000367f00003a7f00003c7f00003e7f0000447f0000327f0000f4630000167f0000206500009e68000022650000c6ab0100806700007e670000386500003e6500003c65000044650000ce6a00003c6c0000186b000072640000261601002c160100686e0000166d0000ee190100fa190100001a0100041a0100c86d0000f46d0000f86d0000061a0100201a01004a75000018650000729300008a78000098780000106e0000c67000004c480200d2700000ee6a0000006b00000264000060c3000076480100326d000066640000289b0000ec940000d0630000da630000dc630000d6630000d4630000a86f0000d873000044f4000000650000ea660000e2630000e6630000ec630000047700009069000042650000ee6c0000f26f0000ac640000f8630000ce640000e8630000f2630000766400007a640000666d000000000000ea6b00009a6b000052950000e4a80000f666000010670000b4660000fa660000bc660000d8630000ea630000ee630000fe630000fc630000f6630000fa630000bc650000f6640000786400009668000028640000f86400004e6400004c6400005064000054640000e0770000706700006a6700003acb0000846a0000dc6700006c6d00007e6d0000b26d00006a6d0000d26d0000da6d0000da640000a4970000e8640000da670000c6680000f26600003a740000826c00002c7a0000247a0000c06a000092670000486d0000cc6d0000986f00009c6f0000706e0000ea970000e897000068d0ffff1c6e0000806e00005a80000016ab0000a6b80000d8a800009e650000a26500009c6600009e660000906600004467000050660000dc6800004c6600001a7300001e73000006640000b8680000246200000e650000e0700000dc700000e0650000de65000024680000
     m_RenameOverlay:
@@ -1391,7 +1391,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 25386
+  m_LastSelectedObjectID: -123852
 --- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
