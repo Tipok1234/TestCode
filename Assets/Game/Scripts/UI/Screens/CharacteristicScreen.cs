@@ -1,5 +1,5 @@
+using System;
 using Datas;
-using Managers;
 using DataUtils;
 using UnityEngine;
 using Views;
@@ -8,6 +8,8 @@ namespace Screens
 {
     public class CharacteristicScreen : ViewScreen<CharacteristicView, CharacteristicData>
     {
+        public event Action UpgradeCharacteristicAction;
+        
         [SerializeField] private CharacteristicConfig config;
         
         public override void OpenScreen()
@@ -22,7 +24,7 @@ namespace Screens
         protected override void OnItemBought(CharacteristicData data)
         {
             base.OnItemBought(data);
-            GameManager.Instance.PlayerSpawner.SavePlayerStats();
+            UpgradeCharacteristicAction?.Invoke();
         }
     }
 }  

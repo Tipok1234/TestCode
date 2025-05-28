@@ -1,5 +1,4 @@
 using System;
-using Managers;
 
 namespace Screens
 {
@@ -20,16 +19,10 @@ namespace Screens
             base.CloseScreen();
             
             ResetGame();
-            
-            if(GameManager.Instance != null)
-                GameManager.Instance.ResetGame();
         }
 
         private void SetupGame()
         {
-            if(GameManager.Instance != null)
-                GameManager.Instance.SetupGame();
-            
             StartGameAction?.Invoke();
         }
 

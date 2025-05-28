@@ -54,6 +54,8 @@ namespace Models
             _jumpForce = baseJumpForce + GameSaves.Instance.GetCharacteristicValue(CharacteristicType.JumpForce);
         }
 
+        public void ResetPlayer() => gameObject.SetActive(false);
+
         private void HandleMovement()
         {
             Vector3 forward = _cameraTransform.forward;

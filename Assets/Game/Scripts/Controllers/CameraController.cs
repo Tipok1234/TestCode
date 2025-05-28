@@ -6,6 +6,7 @@ namespace Controllers
 {
     public class CameraController : MonoBehaviour
     {
+        [SerializeField] private CameraInputProvider cameraInputProvider;
         [SerializeField] private Transform target;
 
         [SerializeField] private Vector3 offset;
@@ -22,15 +23,17 @@ namespace Controllers
         
         private float _rotationY;
         private float _rotationX;
-        
+
         private void FixedUpdate()
         {
             if (target == null || IsMousePointerOverUI()) return;
 
-            if (enableMouseRotation)
+            Vector2 mouseInput = cameraInputProvider.GetMouseInput();
+            
+            if (enableMouseRotation && mouseInput != null)
             {
-                _rotationY += Input.GetAxis("Mouse X") * sensitivity;
-                _rotationX -= Input.GetAxis("Mouse Y") * sensitivity;
+                _rotationY += mouseInput.x * sensitivity;
+                _rotationX -= mouseInput.y * sensitivity;
                 _rotationX = Mathf.Clamp(_rotationX, minVerticalAngle, maxVerticalAngle);
             }
 
@@ -43,7 +46,6 @@ namespace Controllers
         public void Setup(Transform playerTarget)
         {
             target = playerTarget;
-            
             SetupBaseState();
         }
 
@@ -56,15 +58,17 @@ namespace Controllers
                 _rotationX = angles.x;
             }
         }
-        
+
         private bool IsMousePointerOverUI()
         {
-            PointerEventData pointerData = new PointerEventData(EventSystem.current);
-            pointerData.position = Input.mousePosition;
+            PointerEventData pointerData = new PointerEventData(EventSystem.current)
+            {
+                position = Input.mousePosition
+            };
+
             var raycastResults = new List<RaycastResult>();
             EventSystem.current.RaycastAll(pointerData, raycastResults);
-    
-            return raycastResults.Count > 0;
+            return raycastResults.Count > 0; 
         }
     }
 }

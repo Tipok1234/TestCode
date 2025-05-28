@@ -1,34 +1,50 @@
+using Controllers;
+using Models;
 using Screens;
 using UnityEngine;
 
 namespace Managers
 {
-    public class GameManager : Singleton<GameManager>
+    public class GameManager : MonoBehaviour
     {
-        public PlayerSpawner PlayerSpawner => playerSpawner;
+        [SerializeField] private UIManager uiManager;
+        [SerializeField] private CameraController cameraController;
+        [SerializeField] private PlayerCubeFactory playerCubeFactory;
         
-        [SerializeField] private PlayerSpawner playerSpawner;
-
+        private PlayerCubeModel _playerCube;
+        
         private void Start()
         {
-            UIManager.Instance.GetScreen<GameScreen>().StartGameAction += SetupGame;
-            UIManager.Instance.GetScreen<GameScreen>().ResetGameAction += ResetGame;
+            uiManager.GetScreen<GameScreen>().StartGameAction += SetupGame;
+            uiManager.GetScreen<GameScreen>().ResetGameAction += ResetGame;
+            uiManager.GetScreen<CharacteristicScreen>().UpgradeCharacteristicAction += UpdateStatsPlayer;
+            
+            uiManager.GetScreen<GameScreen>().OpenScreen();
         }
 
         private void OnDestroy()
         {
-            UIManager.Instance.GetScreen<GameScreen>().StartGameAction -= SetupGame;
-            UIManager.Instance.GetScreen<GameScreen>().ResetGameAction -= ResetGame;
+            uiManager.GetScreen<GameScreen>().StartGameAction -= SetupGame;
+            uiManager.GetScreen<GameScreen>().ResetGameAction -= ResetGame;
+            uiManager.GetScreen<CharacteristicScreen>().UpgradeCharacteristicAction -= UpdateStatsPlayer;
         }
 
-        public void SetupGame()
+        private void SetupGame()
         {
-            playerSpawner.Setup();
+            _playerCube = playerCubeFactory.CreatePlayer(Vector3.zero,Quaternion.identity,transform);
+            _playerCube.Setup();
+            cameraController.Setup(_playerCube.transform);
         }
 
-        public void ResetGame()
+        private void UpdateStatsPlayer()
         {
-            playerSpawner.ResetPlayer();   
+            if(_playerCube)
+                _playerCube.SetupStats();
+        }
+
+        private void ResetGame()
+        {
+            _playerCube.ResetPlayer();
         }
     }
 }

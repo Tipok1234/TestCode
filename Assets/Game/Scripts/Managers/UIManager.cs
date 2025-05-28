@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Screens;
-using Views;
 
 namespace Managers
 {
@@ -18,10 +17,6 @@ namespace Managers
             SetupScreen();
         }
 
-        private void Start()
-        {
-            OpenScreen<GameScreen>();
-        }
         public void OpenScreen<T>() where T : BaseScreen
         {
             T screen = GetScreen<T>();
